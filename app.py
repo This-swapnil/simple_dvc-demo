@@ -29,7 +29,8 @@ def index():
         except Exception as e:
             print(e)
             # error = {"error": "Something went wrong!! Try again"}
-            return render_template('404.html', error=e)
+            error = {"error":e}
+            return render_template('404.html', error=error)
     else:
         return render_template('index.html')
 
